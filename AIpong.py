@@ -6,7 +6,7 @@ import random
 pygame.init()    
     
 # Constants    
-WIDTH, HEIGHT = 1700, 1000    
+WIDTH, HEIGHT = 1910, 1020    
 WHITE = (255, 255, 255)    
 BLACK = (0, 0, 0)    
 BLUE = (0, 0, 255)    
@@ -46,8 +46,8 @@ cpu_paddle_speed = 7 + (score // 2)  # Slower CPU paddle speed
 ball_size = 100    
 initial_ball_speed_x, initial_ball_speed_y = 3, 3    
 ball_speed_x, ball_speed_y = initial_ball_speed_x, initial_ball_speed_y    
-left_paddle = pygame.Rect(10, HEIGHT // 2 - paddle_height // 2, paddle_width, paddle_height)    
-right_paddle = pygame.Rect(WIDTH - 20, HEIGHT // 2 - paddle_height // 2, paddle_width * score, paddle_height)    
+left_paddle = pygame.Rect(20, HEIGHT // 2 - paddle_height // 2, paddle_width, paddle_height)    
+right_paddle = pygame.Rect(WIDTH - 30, HEIGHT // 2 - paddle_height // 2, paddle_width, paddle_height)    
 ball = pygame.Rect(WIDTH // 2 - ball_size // 2, HEIGHT // 2 - ball_size // 2, ball_size, ball_size)    
     
 # Game states    
@@ -167,7 +167,7 @@ while running:
                     money -= 1  
 
             if player.colliderect(lifemerchant) and keys[pygame.K_SPACE]:    
-                if money > 6:  
+                if money > 5:  
                     player_lifes += 1  
                     money -= 6
   
